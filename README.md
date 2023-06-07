@@ -1,7 +1,7 @@
 # How To Setup A Steam Game Dedicated Server With DigitalOcean
 
 ## Structure of this guide
-This guide can be used for setting up a Steam game dedicated server even if you are not using DigitalOcean as your host, but there are a few optional steps that assume you are using DigitalOcean.
+This guide can be used for setting up a Steam game dedicated server even if you are not using DigitalOcean as your host, but there are a few steps that assume you are using DigitalOcean.
 
 Text such as "(in server)" or "(in client)" before a block of commands indicates whether the commands should be run in the terminal on the server or on your computer.
 
