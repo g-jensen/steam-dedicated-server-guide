@@ -1,25 +1,27 @@
 # How To Setup A Steam Game Dedicated Server With DigitalOcean
 
 ## Structure of this guide
-Text such as "(in server)" or "(in client)" before a block of commands indicates whether the commands should be run on the server or on the client.
+This guide can be used for setting up a Steam game dedicated server even if you are not using DigitalOcean as your host, but there are a few optional steps that assume you are using DigitalOcean.
+
+Text such as "(in server)" or "(in client)" before a block of commands indicates whether the commands should be run in the terminal on the server or on your computer.
 
 Optional steps are at the end, but should not necessarily be done last. Optional steps may also require minor changes to a few commands.
 
 Other than that, this guide should be able to be followed linearly.
 
 ## Setup Terminal Environment
-If you are on Mac or Linux, then you're all good.
+If your computer is running Mac or Linux, then you're all good.
 
 If you are on Windows, you need to install [wsl](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 wsl is just a way of simulating a Linux terminal environment
 
 ## Create A Droplet
-In DigitalOcean, create a project and then add a droplet to that project.
+In DigitalOcean, create a project and then add an Ubuntu droplet to that project.
 
 You can decide to [setup an SSH key](#optional-setup-ssh-key) or just use a password to access your Droplet.
 
-(If you are a beginner, I suggest just using a password)
+(If you are merely testing things out, I suggest just using a password)
 
 ## Creating A New User On The Server
 You don't want to execute every command as root, so create a new user.
@@ -89,7 +91,8 @@ $ ./srcds_run +sv_setsteamaccount <account-key> -net_port_try 1 -authkey <api-ke
 ```
 
 ## (Optional) Setup SSH Key
-### (in client)
+
+(in client)
 ```shell
 $ mkdir .ssh
 $ cd .ssh
@@ -104,7 +107,8 @@ $ ssh -i ~/.ssh/key-file-name root@ip-of-server
 ```
 
 Now create a new SSH key for a new user
-### (in server)
+
+(in server)
 ```shell
 $ su - name-of-user
 $ mkdir ~/.ssh
@@ -119,7 +123,8 @@ First, create a volume in DigitalOcean
 your-droplet->volumes->add volume->create volume
 
 Now setup a directory for your server
-### (in server)
+
+(in server)
 ```shell
 $ cd /mnt/name-of-volume/
 $ sudo mkdir name-of-game
