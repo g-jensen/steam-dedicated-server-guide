@@ -7,7 +7,7 @@ Optional steps are at the end, but should not necessarily be done last. Optional
 
 Other than that, this guide should be able to be followed linearly.
 
-## SetUp Terminal Environment
+## Setup Terminal Environment
 If you are on Mac or Linux, then you're all good.
 
 If you are on Windows, you need to install [wsl](https://learn.microsoft.com/en-us/windows/wsl/install)
